@@ -1,0 +1,136 @@
+.todo-section {
+  width: 100%;
+  margin-top: 5em;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.todo {
+  background: #ffcdab;
+  padding: 2em;
+  width: 100%;
+  max-width: 35em;
+  min-width: 25em;
+  border-radius: 1em;
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+}
+
+.todo__title {
+  font-size: 2em;
+}
+
+.todo__form {
+  padding: 0.5em 0;
+}
+
+.todo .form-control input {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+.todo .btn-wrap {
+  padding-top: 1em;
+}
+
+.todo .btn-wrap button {
+  padding: 0.5em 3em;
+  border-radius: 2em;
+  cursor: pointer;
+  background: #ffa45c;
+  font-weight: 500;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.todo .btn-wrap button:hover {
+  background: #f59f59;
+}
+
+.items {
+  width: 100%;
+  margin-top: 5em;
+}
+
+.items__title {
+  font-size: 3em;
+}
+
+.items__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+
+.items__list .item {
+  background: #ffcdab;
+  padding: 1em;
+  width: 100%;
+  border-radius: 0.5em;
+  position: relative;
+}
+
+.items__list .item p {
+  font-size: 1.5em;
+  max-width: 50%;
+}
+
+.items__list .item .btn-item-del {
+  font-size: 2em;
+  position: absolute;
+  top: -1em;
+  right: 1em;
+  cursor: pointer;
+}
+
+.modal {
+  position: absolute;
+  background: #eed2bb;
+  padding: 2em;
+  width: 20em;
+  text-align: center;
+  border-radius: 1em;
+  font-size: 1.3em;
+  font-weight: 600;
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+  -webkit-animation: showModal 2s ease forwards;
+          animation: showModal 2s ease forwards;
+}
+
+@-webkit-keyframes showModal {
+  0% {
+    top: -10em;
+  }
+  50% {
+    top: 2em;
+  }
+  70% {
+    top: 2em;
+  }
+  100% {
+    top: -10em;
+  }
+}
+
+@keyframes showModal {
+  0% {
+    top: -10em;
+  }
+  50% {
+    top: 2em;
+  }
+  70% {
+    top: 2em;
+  }
+  100% {
+    top: -10em;
+  }
+}

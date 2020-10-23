@@ -1,0 +1,114 @@
+$primary: #ffcdab;
+$btn-primary: #ffa45c;
+$btn-primary--hover: #f59f59;
+$modal: #eed2bb;
+
+.todo-section {
+	width: 100%;
+	margin-top: 5em;
+	display: grid;
+	place-items: center;
+}
+.todo {
+	background: $primary;
+	padding: 2em;
+	width: 100%;
+	max-width: 35em;
+	min-width: 25em;
+	border-radius: 1em;
+	box-shadow: 0 0 1em rgba($color: #000000, $alpha: 0.2);
+
+	&__title {
+		font-size: 2em;
+	}
+
+	&__form {
+		padding: 0.5em 0;
+	}
+
+	.form-control input {
+		width: 100%;
+		padding: 0.5em;
+		border-radius: 0.5em;
+	}
+
+	.btn-wrap {
+		padding-top: 1em;
+		button {
+			padding: 0.5em 3em;
+			border-radius: 2em;
+			cursor: pointer;
+			background: $btn-primary;
+			font-weight: 500;
+			transition: background-color 0.3s ease;
+
+			&:hover {
+				background: $btn-primary--hover;
+			}
+		}
+	}
+}
+
+.items {
+	width: 100%;
+	margin-top: 5em;
+
+	&__title {
+		font-size: 3em;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+
+		.item {
+			background: $primary;
+			padding: 1em;
+			width: 100%;
+			border-radius: 0.5em;
+			position: relative;
+
+			p {
+				font-size: 1.5em;
+				max-width: 50%;
+			}
+
+			.btn-item-del {
+				font-size: 2em;
+				position: absolute;
+				top: -1em;
+				right: 1em;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.modal {
+	position: absolute;
+	background: $modal;
+	padding: 2em;
+	width: 20em;
+	text-align: center;
+	border-radius: 1em;
+	font-size: 1.3em;
+	font-weight: 600;
+	box-shadow: 0 0 1em rgba($color: #000000, $alpha: 0.2);
+	animation: showModal 2s ease forwards;
+}
+
+@keyframes showModal {
+	0% {
+		top: -10em;
+	}
+	50% {
+		top: 2em;
+	}
+	70% {
+		top: 2em;
+	}
+	100% {
+		top: -10em;
+	}
+}
